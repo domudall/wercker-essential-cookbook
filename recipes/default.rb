@@ -30,7 +30,7 @@ end
 end
 
 
-script "install_phantomjs" do
+script "install_elasticsearch" do
     interpreter "bash"
     user "root"
     code <<-EOH
