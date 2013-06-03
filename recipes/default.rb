@@ -10,13 +10,7 @@ end
   end
 end
 
-%w{memcached mongodb-clients}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-%w{memcached mongodb-clients}.each do |pkg|
+%w{memcached mongodb-clients libv8-dev}.each do |pkg|
   package pkg do
     action :install
   end
