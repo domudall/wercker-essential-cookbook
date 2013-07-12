@@ -1,4 +1,4 @@
-%w{wget build-essential curl git-core nano language-pack-en nodejs erlang openjdk-6-jre ruby1.9.3 wget curl}.each do |pkg|
+%w{wget build-essential curl git-core nano language-pack-en nodejs npm erlang openjdk-6-jre ruby1.9.3 wget curl}.each do |pkg|
   package pkg do
     action :install
   end
