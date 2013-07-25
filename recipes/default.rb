@@ -48,9 +48,10 @@ script "install_phantomjs" do
     environment ({ 'HOME' => '/home/' + user })
     code <<-EOH
     cd
-    wget http://phantomjs.googlecode.com/files/phantomjs-1.8.2-linux-x86_64.tar.bz2
+
+    wget http://phantomjs.googlecode.com/files/phantomjs-1.9.1-linux-x86_64.tar.bz2
     mkdir phantomjs
-    tar -C phantomjs --strip-components=1 -xf phantomjs-1.8.2-linux-x86_64.tar.bz2
+    tar -C phantomjs --strip-components=1 -xf phantomjs-1.9.1-linux-x86_64.tar.bz2
     echo 'export PATH=\"$HOME/phantomjs/bin:$PATH\"' >> ~/.bash_profile
 
     EOH
