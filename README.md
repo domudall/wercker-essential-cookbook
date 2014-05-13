@@ -1,4 +1,4 @@
-wercker-go-cookbook
+wercker-essential-cookbook
 ================
 
 
