@@ -41,18 +41,3 @@ else
   user = "ubuntu"
 end
 
-
-script "install_phantomjs" do
-    interpreter "bash"
-    user user
-    environment ({ 'HOME' => '/home/' + user })
-    code <<-EOH
-    cd
-
-    wget https://bitbucket.org/ariya/phantomjs/downloads/phantomjs-1.9.7-linux-x86_64.tar.bz2
-    mkdir phantomjs
-    tar -C phantomjs --strip-components=1 -xf phantomjs-1.9.7-linux-x86_64.tar.bz2
-    echo 'export PATH=\"$HOME/phantomjs/bin:$PATH\"' >> ~/.bash_profile
-
-    EOH
-end
