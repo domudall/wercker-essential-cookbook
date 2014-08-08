@@ -10,13 +10,12 @@ end
   end
 end
 
-script "install_elasticsearch" do
+script "install_nodejs" do
     interpreter "bash"
     user "root"
     code <<-EOH
-    cd
-    wget https://download.elasticsearch.org/elasticsearch/elasticsearch/elasticsearch-0.20.5.deb
-    dpkg -i elasticsearch-0.20.5.deb
+    sh -c 'curl -fsSL https://raw.github.com/isaacs/nave/master/nave.sh > /usr/local/bin/nave && chmod ugo+x /usr/local/bin/nave'
+    nave usemain stable
     EOH
 end
 
