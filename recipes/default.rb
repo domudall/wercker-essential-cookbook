@@ -1,4 +1,4 @@
-%w{wget build-essential curl git-core nano language-pack-en erlang openjdk-6-jre ruby1.9.3 wget curl}.each do |pkg|
+%w{wget build-essential curl git-core nano language-pack-en erlang openjdk-6-jre ruby1.9.3 curl}.each do |pkg|
   package pkg do
     action :install
   end
@@ -9,20 +9,6 @@ end
     action :install
   end
 end
-
-%w{memcached mongodb-clients libv8-dev}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
-
-%w{xvfb firefox libqtwebkit4 wkhtmltopdf}.each do |pkg|
-  package pkg do
-    action :install
-  end
-end
-
 
 script "install_elasticsearch" do
     interpreter "bash"
